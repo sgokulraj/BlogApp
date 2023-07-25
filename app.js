@@ -18,7 +18,7 @@ const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 const salt = bcrypt.genSaltSync(10);
 const uploadMiddleware = multer({ dest: "uploads/" });
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
